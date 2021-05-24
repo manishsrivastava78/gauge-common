@@ -23,5 +23,11 @@ public class GaugeStepResponseValidation {
 		int expected = Integer.parseInt(statusCode);
 		assertThat(response.statusCode()).isEqualTo(expected);
 	}
-
+//The response content-type should be
+	@Step("The response content-type should be <contentType>")
+	public void responseContentTypeMatches(String contentType) {
+		Response response = GaugeScenarioStore.getResponse();
+		//int expected = Integer.parseInt(statusCode);
+		assertThat(response.getContentType()).isEqualTo(contentType);
+	}
 }

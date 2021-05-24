@@ -336,6 +336,10 @@ public class GaugeStepImplementation implements Constants {
 		GaugeScenarioStore.addFilter(myFilter);
 	}
 
+	/**
+	 * 
+	 * @param jsonBody
+	 */
 	public void setJSONBody(String jsonBody) {
 		Filter myFilter = (requestSpec, responseSpec, ctx) -> {
 			requestSpec.body(jsonBody);
